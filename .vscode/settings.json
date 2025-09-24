@@ -1,0 +1,7 @@
+{
+  "chat.commandCenter.enabled": false,
+  "C_Cpp.copilotHover": "disabled",
+  "github.copilot.chat.agent.autoFix": false,
+  "github.copilot.chat.codeGeneration.useInstructionFiles": false,
+  "github.copilot.chat.customInstructionsInSystemMessage": false
+}
