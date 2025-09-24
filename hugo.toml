@@ -1,6 +1,6 @@
-baseURL = 'https://example.org/'
+baseURL = 'https://homosapiens.ro/'
 languageCode = 'en-us'
-title = 'Hugo TailwindCSS Starter'
+title = 'Homosapiens'
 
 ignoreLogs = ["warning-goldmark-raw-html"]
 

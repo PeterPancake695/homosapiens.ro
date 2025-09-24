@@ -1,0 +1,23 @@
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>{{ block "title" . }}
+{{- .Site.Title }} - {{ .Title -}}
+{{ end }}</title>
+{{- if .Description }}
+<meta name="description" content="{{ .Description }}" />
+{{ end -}}
+{{- if .Keywords }}
+<meta name="keywords" content="{{ delimit .Keywords " ," }}" />
+{{ end -}}
+{{- if .Params.Author }}
+<meta name="author" content="{{ .Params.Author}}" />
+{{ end -}}
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap" rel="stylesheet">
+<script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+
+{{ hugo.Generator }}
+{{ partialCached "css.html" . }}
+{{ partialCached "js.html" . }}

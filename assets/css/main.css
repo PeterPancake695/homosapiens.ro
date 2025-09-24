@@ -13,3 +13,7 @@
 .sample {
   @apply text-red-400 italic;
 }
+
+html * {
+  font-family: 'JetBrains Mono';
+}
