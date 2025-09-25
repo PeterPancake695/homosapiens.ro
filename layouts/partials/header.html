@@ -9,17 +9,34 @@
   <nav><div class="md:flex items-center flex-nowrap">
 
     <ul class="hidden md:flex space-x-6">
-      <li><a href="#">About Us</a></li>
-      <li><a href="#">Events</a></li> 
-      <li><a href="#">Sponsors</a></li>
-      <li><a href="#">Blog</a></li>
-      <li><a href="#">Mass-Media</a></li> 
-      <li><a href="#">Contact</a></li>
+      <li><a href="#" class="hover:text-slate-400 transition-all duration-500 ease-in-out">About Us</a></li>
+      <li><a href="#" class="hover:text-slate-400 transition-all duration-500 ease-in-out">Events</a></li> 
+      <li><a href="#" class="hover:text-slate-400 transition-all duration-500 ease-in-out">Sponsors</a></li>
+      <li><a href="#" class="hover:text-slate-400 transition-all duration-500 ease-in-out">Blog</a></li>
+      <li><a href="#" class="hover:text-slate-400 transition-all duration-500 ease-in-out">Mass-Media</a></li> 
+      <li><a href="#" class="hover:text-slate-400 transition-all duration-500 ease-in-out">Contact</a></li>
     </ul>
     <button id="hmb-btn" class="flex flex-col justify-center items-center space-y-1 ml-4 shrink-0">
-      <span class="block w-6 h-0.5 bg-slate-300"></span>
-      <span class="block w-6 h-0.5 bg-slate-300"></span>
-      <span class="block w-6 h-0.5 bg-slate-300"></span>
+
+      <svg width="64" height="64" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg" class="hamburgerMenu">
+        <g id="HamburgerMenu">
+          <g id="hmbDefault">
+            <path id="Vector 1" d="M12 19H52" stroke="#CAD5E2" stroke-width="5"/>
+            <path id="Vector 3" d="M12 45H52" stroke="#CAD5E2" stroke-width="5"/>
+            <path id="Vector 2" d="M12 32H42" stroke="#CAD5E2" stroke-width="5"/>
+          </g>
+          <g id="hmbHover">
+            <path id="Vector 1_2" d="M12 19H42" stroke="#CAD5E2" stroke-width="5"/>
+            <path id="Vector 3_2" d="M12 45H42" stroke="#CAD5E2" stroke-width="5"/>
+            <path id="Vector 2_2" d="M12 32H52" stroke="#CAD5E2" stroke-width="5"/>
+          </g>
+          <g id="hmbOpen">
+            <path id="Vector 1_3" d="M17.8579 17.8579L46.1421 46.1421" stroke="#CAD5E2" stroke-width="5"/>
+            <path id="Vector 3_3" d="M17.8579 46.1421L46.1421 17.8579" stroke="#CAD5E2" stroke-width="5"/>
+          </g>
+        </g>
+      </svg>
+
     </button>
 
   </div></nav>
@@ -28,19 +45,78 @@
 <div id="hmb-menu" class="bg-gray-800 text-slate-300 max-w-64 w-48 fixed top-16 -right-96 h-screen flex flex-col justify-baseline items-center text-center duration-300 ease-in-out">
   <ul class="space-y-6">
     <li></li>
-    <li><a href="#">About Us</a></li>
-    <li><a href="#">Events</a></li> 
-    <li><a href="#">Sponsors</a></li>
-    <li><a href="#">Blog</a></li>
-    <li><a href="#">Mass-Media</a></li> 
-    <li><a href="#">Contact</a></li>
+    <li><a href="#" class="hover:text-slate-400 transition-all duration-500 ease-in-out">About Us</a></li>
+    <li><a href="#" class="hover:text-slate-400 transition-all duration-500 ease-in-out">Events</a></li> 
+    <li><a href="#" class="hover:text-slate-400 transition-all duration-500 ease-in-out">Sponsors</a></li>
+    <li><a href="#" class="hover:text-slate-400 transition-all duration-500 ease-in-out">Blog</a></li>
+    <li><a href="#" class="hover:text-slate-400 transition-all duration-500 ease-in-out">Mass-Media</a></li> 
+    <li><a href="#" class="hover:text-slate-400 transition-all duration-500 ease-in-out">Contact</a></li>
   </ul>
 </div>
+
+<style>
+  .hamburgerMenu {
+    width: 70%;
+    height: auto;
+  }
+
+  #hmbDefault, #hmbHover, #hmbOpen {
+    transition: all 200ms ease-in-out;
+  }
+
+  #hmbDefault {
+    opacity: 1;
+  }
+  #hmbHover {
+    opacity: 0;
+  }
+  #hmbOpen {
+    opacity: 0;
+  }
+</style>
+
 <script>
   const hmbButton = document.getElementById('hmb-btn');
   const hmbMenu = document.getElementById('hmb-menu');
+  const hmbDefault = document.getElementById('hmbDefault');
+  const hmbHover = document.getElementById('hmbHover');
+  const hmbOpen = document.getElementById('hmbOpen');
+
+  let isOpen = false;
+
+  hmbButton.addEventListener("mouseenter", () => {
+    if (!isOpen) {
+      hmbDefault.style.opacity = "0";
+      hmbHover.style.opacity = "1";
+    }
+  });
+
+  hmbButton.addEventListener("mouseleave", () => {
+    if (!isOpen) {
+      hmbDefault.style.opacity = "1";
+      hmbHover.style.opacity = "0";
+    }
+  });
+
+
   hmbButton.addEventListener('click', () => {
+    // toggle menu
     hmbMenu.classList.toggle('right-0');
     hmbMenu.classList.toggle('-right-96');
+
+    // toggle hamburger icon
+    if (!isOpen) {
+      // open
+      hmbDefault.style.opacity = "0";
+      hmbHover.style.opacity = "0";
+      hmbOpen.style.opacity = "1";
+    } else {
+      // close
+      hmbDefault.style.opacity = "1";
+      hmbHover.style.opacity = "0";
+      hmbOpen.style.opacity = "0";
+    }
+
+    isOpen = !isOpen;
   });
 </script>
