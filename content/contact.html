@@ -1,0 +1,62 @@
++++
+title = "Contact Page"
++++
+<div class="flex w-full lg:flex-row flex-col justify-center text-slate-700 px-[10%] py-[5%]">
+  <div class="flex flex-col space-y-6 justify-between">
+    <h1 class="font-bold text-2xl pt-[2%]"><ion-icon name="person"></ion-icon>Contact Us</h1>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt velit nulla unde animi quos. Praesentium laudantium possimus optio non nulla iure a maiores eligendi dolorum, itaque fuga illum. Dolor, nulla!</p>
+    <ul class="list-none mt-6 space-y-6">
+          <li>
+            <a href="https://www.facebook.com/TeamRO109" class="hover:text-slate-400 transition-all duration-500 ease-in-out">
+              <ion-icon name="logo-facebook"></ion-icon> Facebook: @TeamRO109
+            </a>
+          </li>
+          <li>
+            <a href="https://www.instagram.com/homosapiens_109?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" class="hover:text-slate-400 transition-all duration-500 ease-in-out">
+              <ion-icon name="logo-instagram"></ion-icon> Instagram: @homosapiens_109
+            </a>
+          </li>
+          <li>
+            <a href="https://maps.app.goo.gl/ryTFJU85fc46iDdT7" class="hover:text-slate-400 transition-all duration-500 ease-in-out">
+              <ion-icon name="location-sharp"></ion-icon> Location:
+              <p>Colegiul National "B.P. Hasdeu"</p>
+              <p>Buzău Bulevardul Gării 1, Buzău 120218</p>
+            </a>
+          </li>
+          <li>
+            <a href="mailto:contact@homosapiens.ro" class="hover:text-slate-400 transition-all duration-500 ease-in-out">
+              <ion-icon name="mail-sharp"></ion-icon> Email: contact@homosapiens.ro
+            </a>
+          </li>
+          <li>
+            <ion-icon name="call"></ion-icon> Phone number: +40 770956840
+          </li>
+          <li>
+            <a href="https://www.bphasdeu.ro/" class="hover:text-slate-400 transition-all duration-500 ease-in-out">
+              <ion-icon name="school"></ion-icon> School website: bphasdeu.ro
+            </a>
+          </li>
+        </ul>
+  </div>
+  <div class="p-8"></div>
+  <div class="bg-gray-600 text-slate-300 rounded-xl shadow-lg p-8 w-full flex justify-between flex-col h-full">
+    <form action="https://formsubmit.co/contact@homosapiens.ro" method="POST" class="flex flex-col space-y-4">
+      <input type="text" name="_honey" class="hidden">
+      <input type="hidden" name="_captcha" value="false">
+      <input type="hidden" name="_next" value="https://homosapiens.ro/success">
+      <div>
+        <label for="name" class="text-md">Your Name</label>
+        <input type="text" placeholder="Your name" class="ring-1 ring-gray-300 rounded-md px-4 py-2 mt -2outline-none w-full focus:ring-2 focus:ring-orange-400">
+      </div>
+      <div>
+        <label for="email" class="text-md">Email Adress</label>
+        <input type="text" placeholder="Your email" class="ring-1 ring-gray-300 rounded-md px-4 py-2 mt-2 outline-none w-full focus:ring-2 focus:ring-orange-400">
+      </div>
+      <div class="flex flex-col">
+        <label for="message" class="text-md">Message</label>
+        <textarea type="text" placeholder="Your message" class="min-h-36 ring-1 ring-gray-300 rounded-md px-4 py-2 mt-2 outline-none w-full focus:ring-2 focus:ring-orange-400"></textarea>
+      </div>
+      <button id="sendButton" class="w-full bg-amber-600 text-slate-300 rounded-lg p-2 hover:bg-yellow-600 transition duration-500 ease-in-out">Send Message</button>
+    </form>
+  </div>
+</div>

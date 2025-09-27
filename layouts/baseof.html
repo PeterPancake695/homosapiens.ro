@@ -6,8 +6,8 @@
 <body class="bg-amber-100">
   Hello
   {{ partial "header.html" . }}
-  <main class="pt-10">
-    {{ block "main" . }}{{ end }}
+  <main class="pt-16 min-h-screen">
+    {{ .Content }}
   </main>
   {{ partial "footer.html" . }}
 </body>
